@@ -10,7 +10,7 @@ This module allows you to enable or disable it easily, without affecting other p
 - Helpful in multi-employee environments.
 
 ## Requirements
-- PrestaShop 1.7.8+ or 8.x
+- PrestaShop 1.7.8+ or 9.x
 - `ps_accounts` module installed
 
 ## Installation
