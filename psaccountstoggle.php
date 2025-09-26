@@ -26,6 +26,9 @@ class PsAccountsToggle extends Module
 
         $this->displayName = $this->l('PS Accounts Toggle');
         $this->description = $this->l('PS_ACCOUNTS_LOGIN_ENABLED is an internal, undocumented setting of the ps_accounts module used to enable the login flow through a PrestaShop Addons account. This module allows you to easily enable or disable this setting at will, without affecting the other features of ps_accounts.');
+
+        $this->ps_versions_compliancy = array('min' => '1.7', 'max' => _PS_VERSION_);
+
     }
 
     public function install()
