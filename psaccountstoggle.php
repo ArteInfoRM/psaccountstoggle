@@ -43,7 +43,8 @@ class PsAccountsToggle extends Module
 
     protected function checkPsAccountsInstalled()
     {
-        return Module::isInstalled('ps_accounts');
+        $module = Module::getInstanceByName('ps_accounts');
+        return (bool) ($module && !empty($module->id));
     }
 
     public function getContent()
