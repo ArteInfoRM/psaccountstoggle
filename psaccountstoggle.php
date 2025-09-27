@@ -17,7 +17,7 @@ class PsAccountsToggle extends Module
     {
         $this->name = 'psaccountstoggle';
         $this->tab = 'administration';
-        $this->version = '1.0.0';
+        $this->version = '1.0.1';
         $this->author = 'Tecnoacquisti.com';
         $this->need_instance = 0;
         $this->bootstrap = true;
@@ -63,13 +63,19 @@ class PsAccountsToggle extends Module
                 $installed = true;
         }
 
+        $useSsl = (bool)Configuration::get('PS_SSL_ENABLED_EVERYWHERE') || (bool)Configuration::get('PS_SSL_ENABLED');
+        $shop_base_url = $this->context->link->getBaseLink((int)$this->context->shop->id, $useSsl);
+
         $this->context->smarty->assign([
             'ps_account' => $installed,
-            'module_dir' => $this->_path
+            'module_dir' => $this->_path,
+            'shop_base_url' => $shop_base_url,
         ]);
 
         $output .= $this->context->smarty->fetch($this->local_path . 'views/templates/admin/configure.tpl');
-        return $output . $this->renderForm();
+        $output .= $this->renderForm();
+        $output .= $this->context->smarty->fetch($this->local_path . 'views/templates/admin/copyright.tpl');
+        return $output;
 
     }
 

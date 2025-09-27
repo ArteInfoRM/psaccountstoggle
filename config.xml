@@ -2,8 +2,8 @@
 <module>
     <name>psaccountstoggle</name>
     <displayName><![CDATA[PS Accounts Toggle]]></displayName>
-    <version><![CDATA[1.0.0]]></version>
-    <description><![CDATA[Enable/Disable PS_ACCOUNTS_LOGIN_ENABLED]]></description>
+    <version><![CDATA[1.0.1]]></version>
+    <description><![CDATA[PS_ACCOUNTS_LOGIN_ENABLED is an internal, undocumented setting of the ps_accounts module used to enable the login flow through a PrestaShop Addons account. This module allows you to easily enable or disable this setting at will, without affecting the other features of ps_accounts.]]></description>
     <author><![CDATA[Tecnoacquisti.com]]></author>
     <tab><![CDATA[administration]]></tab>
     <is_configurable>1</is_configurable>
