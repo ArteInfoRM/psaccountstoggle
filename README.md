@@ -1,5 +1,6 @@
 # PS Accounts Toggle
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Built for PrestaShop](https://img.shields.io/badge/Built%20for-PrestaShop-DF0067?logo=prestashop&logoColor=white)  
 
 `PS_ACCOUNTS_LOGIN_ENABLED` is an internal, undocumented setting of the *ps_accounts* module used to control the login flow through PrestaShop Addons account.  
 This module allows you to enable or disable it easily, without affecting other ps_accounts features.
